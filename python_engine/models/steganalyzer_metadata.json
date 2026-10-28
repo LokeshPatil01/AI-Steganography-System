@@ -1,0 +1,177 @@
+{
+  "model_name": "SteganalyzerCNN",
+  "model_type": "Spatial Rich Model (SRM) Convolutional Steganalyzer",
+  "framework": "PyTorch",
+  "torch_version": "2.14.1+cpu",
+  "srm_kernels": [
+    "KV 5x5",
+    "Laplacian 5x5",
+    "Horizontal Edge 5x5"
+  ],
+  "truncation_threshold": 3.0,
+  "security_decision_threshold": 0.35,
+  "parameters": {
+    "total": 249580,
+    "trainable": 249505,
+    "fixed_srm": 75
+  },
+  "training_samples": 168,
+  "validation_samples": 36,
+  "test_samples": 36,
+  "best_epoch": 15,
+  "test_metrics": {
+    "test_accuracy": 0.9167,
+    "test_precision": 0.8947,
+    "test_recall": 0.9444,
+    "test_f1": 0.9189,
+    "test_auc": 0.963,
+    "test_loss": 0.2764,
+    "method_breakdown": {
+      "scatter": {
+        "count": 6,
+        "mean_p_stego": 0.8707,
+        "detection_rate_pct": 100.0
+      },
+      "adaptive": {
+        "count": 6,
+        "mean_p_stego": 0.7307,
+        "detection_rate_pct": 83.3
+      },
+      "baseline": {
+        "count": 6,
+        "mean_p_stego": 0.8124,
+        "detection_rate_pct": 100.0
+      },
+      "Cover": {
+        "count": 18,
+        "mean_p_stego": 0.1795,
+        "detection_rate_pct": 11.1
+      }
+    },
+    "training_duration_seconds": 14.4
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6912,
+      "train_accuracy": 0.5298,
+      "val_loss": 0.6897,
+      "val_accuracy": 0.5556,
+      "val_auc": 0.6049
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7011,
+      "train_accuracy": 0.5119,
+      "val_loss": 0.6603,
+      "val_accuracy": 0.7222,
+      "val_auc": 0.7438
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6483,
+      "train_accuracy": 0.6726,
+      "val_loss": 0.6125,
+      "val_accuracy": 0.6111,
+      "val_auc": 0.8056
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5994,
+      "train_accuracy": 0.6726,
+      "val_loss": 0.6329,
+      "val_accuracy": 0.6667,
+      "val_auc": 0.7593
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.533,
+      "train_accuracy": 0.75,
+      "val_loss": 0.5533,
+      "val_accuracy": 0.6667,
+      "val_auc": 0.858
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5191,
+      "train_accuracy": 0.7202,
+      "val_loss": 0.491,
+      "val_accuracy": 0.6944,
+      "val_auc": 0.7901
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.4227,
+      "train_accuracy": 0.7976,
+      "val_loss": 0.4447,
+      "val_accuracy": 0.7222,
+      "val_auc": 0.9167
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.4292,
+      "train_accuracy": 0.7738,
+      "val_loss": 1.0179,
+      "val_accuracy": 0.7222,
+      "val_auc": 0.7994
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4362,
+      "train_accuracy": 0.7738,
+      "val_loss": 0.4355,
+      "val_accuracy": 0.7778,
+      "val_auc": 0.8827
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3911,
+      "train_accuracy": 0.8274,
+      "val_loss": 0.4012,
+      "val_accuracy": 0.7778,
+      "val_auc": 0.8796
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.3998,
+      "train_accuracy": 0.7917,
+      "val_loss": 0.3638,
+      "val_accuracy": 0.8056,
+      "val_auc": 0.9198
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.4158,
+      "train_accuracy": 0.7917,
+      "val_loss": 0.4267,
+      "val_accuracy": 0.75,
+      "val_auc": 0.8889
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.4346,
+      "train_accuracy": 0.7857,
+      "val_loss": 0.3268,
+      "val_accuracy": 0.8611,
+      "val_auc": 0.9568
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.3521,
+      "train_accuracy": 0.8571,
+      "val_loss": 0.3134,
+      "val_accuracy": 0.8056,
+      "val_auc": 0.9352
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.3703,
+      "train_accuracy": 0.7798,
+      "val_loss": 0.2952,
+      "val_accuracy": 0.8611,
+      "val_auc": 0.9599
+    }
+  ],
+  "saved_model_path": "models\\steganalyzer.pth",
+  "timestamp_utc": "2026-10-09T05:11:46.730933"
+}

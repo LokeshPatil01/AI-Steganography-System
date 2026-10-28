@@ -1,0 +1,6 @@
+@StegoApi_HostAddress = http://localhost:5104
+
+GET {{StegoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

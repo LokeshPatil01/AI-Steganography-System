@@ -1,0 +1,87 @@
+{
+  "model_type": "RandomForestClassifier",
+  "framework": "scikit-learn",
+  "feature_names": [
+    "entropy",
+    "variance",
+    "std_dev",
+    "sobel_gradient_mean",
+    "canny_edge_density",
+    "laplacian_variance",
+    "color_variance",
+    "noise_residual_std"
+  ],
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "class_descriptions": {
+    "0": "Smooth / Flat (Preserved untouched; lowest capacity)",
+    "1": "Medium Texture (Moderate embedding capacity)",
+    "2": "High Texture / Complex Edges (High capacity; maximum HVS masking)"
+  },
+  "metrics": {
+    "train_samples": 2400,
+    "test_samples": 600,
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "confusion_matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        0,
+        200
+      ]
+    ],
+    "per_class_metrics": {
+      "0_Smooth": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      },
+      "1_Medium": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      },
+      "2_HighTexture": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      }
+    },
+    "feature_importances": {
+      "std_dev": 0.175,
+      "variance": 0.1724,
+      "sobel_gradient_mean": 0.1505,
+      "laplacian_variance": 0.1474,
+      "noise_residual_std": 0.1154,
+      "canny_edge_density": 0.1102,
+      "color_variance": 0.102,
+      "entropy": 0.0271
+    },
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 12,
+      "min_samples_split": 4,
+      "min_samples_leaf": 2,
+      "random_state": 42,
+      "class_weight": "balanced",
+      "n_jobs": -1
+    },
+    "trained_at": "2026-10-08T18:08:50.937242+00:00"
+  }
+}
